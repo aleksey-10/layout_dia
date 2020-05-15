@@ -543,11 +543,8 @@ p {
   .card-features__item {
     font-size: 13px;
     line-height: 1.5em; }
-  .card-features__bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
   .card-features__btn {
+    position: absolute;
     width: 40px;
     height: 40px;
     display: -webkit-box;
@@ -559,15 +556,31 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 50%;
+    border-radius: 40px;
     margin-right: 16px;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s; }
-    .card-features__btn:hover {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2); }
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s; }
+  .card-features__btn-name {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+    line-height: 40px; }
+  .card-features__bottom {
+    display: inline-block;
+    position: relative;
+    width: 143px;
+    height: 40px;
+    color: inherit; }
+    .card-features__bottom:hover .card-features__btn {
+      width: 140%;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+    .card-features__bottom:hover .card-features__arrow {
+      display: none; }
+    .card-features__bottom:hover .card-features__btn-name {
+      color: #fff; }
   .card-features--blue .card-features__order {
     color: #56ccf2; }
   .card-features--blue .card-features__btn {
@@ -623,9 +636,11 @@ p {
     -ms-flex-line-pack: end;
         align-content: end;
     margin-bottom: 44px; }
-  .service__card:nth-child(2n-1) {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%); }
+  .service__card {
+    height: 264px; }
+    .service__card:nth-child(2n-1) {
+      -webkit-transform: translateY(50%);
+              transform: translateY(50%); }
 
 @media (max-width: 1919px) {
   .service {
